@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+}
+
+.background-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/bg_cocktail.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;  
+  z-index: -1;   
+}
+
+

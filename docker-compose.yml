@@ -1,0 +1,28 @@
+version: '3'
+services:
+  # Backend service
+  cocktail-backend:
+    build:
+      context: ./Cocktail-backend  
+    container_name: cocktail-backend
+    ports:
+      - "8080:8080" 
+    networks:
+      - cocktail-network
+
+  # Frontend service
+  cocktail-frontend:
+    build:
+      context: ./Cocktail-frontend  
+    ports:
+      - "3000:3000"  
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080/api  
+    depends_on:
+      - cocktail-backend  
+    networks:
+      - cocktail-network
+
+networks:
+  cocktail-network:
+    driver: bridge

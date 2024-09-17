@@ -1,0 +1,8 @@
+# Ignore Gradle's build output directories
+build/
+.gradle/
+
+# Ignore the Gradle Wrapper files for Windows
+gradlew.bat
+
+
